@@ -11,8 +11,8 @@ public class Magazine extends Element {
 
     public Magazine() {}
 
-    public Magazine(String title, int publicationAt, Periodical periodical) {
-        super(title, publicationAt);
+    public Magazine(String isbn, String title, int publicationAt, int pages, Periodical periodical) {
+        super(isbn, title, publicationAt, pages);
         this.periodical = periodical;
     }
 
