@@ -50,6 +50,7 @@ public class ElementDAO {
         }
     }
 
+    // cerco un elemento per ISBN, TITOLO, AUTORE o ANNO
     public List<Element> search(int typeSearch, String value) {
         List<Element> results = null;
 
@@ -62,7 +63,7 @@ public class ElementDAO {
 
             case 2 -> {
                 TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b WHERE LOWER(b.author) LIKE LOWER(:value)", Book.class);
-                query.setParameter("valore", "%" + value + "%");
+                query.setParameter("value", "%" + value + "%");
                 results = List.copyOf(query.getResultList());
             }
 

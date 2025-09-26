@@ -16,7 +16,7 @@ public class Application {
         ElementDAO ed = new ElementDAO(em);
 
         // AGGIUNGO UN ELEMENTO
-      /*  try {
+       try {
             System.out.print("\nScegli cosa inserire (1 - Libro, 2 - Rivista): ");
             int option = scanner.nextInt();
             scanner.nextLine();
@@ -67,13 +67,13 @@ public class Application {
             em.close();
             emf.close();
         }
-
+/*
         // RIMUOVO UN ELEMENTO TRAMITE ISBN
         System.out.print("\nInserisci l'ISBN dell'elemento da rimuovere: ");
         String isbnToDelete = scanner.nextLine();
 
         ed.deleteByIsbn(isbnToDelete);
-*/
+
         // CERCO UN ELEMENTO PER ISBN, AUTORE, ANNO DI PUBBLICAZIONE o TITOLO
         System.out.println("1 = ISBN");
         System.out.println("2 = Autore");
@@ -94,6 +94,6 @@ public class Application {
         } else {
             System.out.println("\nRisultati trovati:");
             results.forEach(System.out::println);
-        }
+        }*/
     }
 }
